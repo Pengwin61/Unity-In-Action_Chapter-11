@@ -22,6 +22,7 @@ public class InventoryPopup : MonoBehaviour
     {
         List<string> itemList = Managers.Inventory.GetItemList();
 
+
         int len = itemIcons.Length;
         for (int i = 0; i < len; i++)
         {
