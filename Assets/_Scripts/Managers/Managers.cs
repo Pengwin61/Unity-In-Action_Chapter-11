@@ -61,7 +61,7 @@ public class Managers : MonoBehaviour
 			
 			if (numReady > lastReady) {
 				Debug.Log("Progress: " + numReady + "/" + numModules);
-				Messenger<int, int>.Broadcast(StartupEvent.MANAGERS_PROGRESS, numReady, numModules);
+				//Messenger<int, int>.Broadcast(StartupEvent.MANAGERS_PROGRESS, numReady, numModules);
 				
 			}
 			

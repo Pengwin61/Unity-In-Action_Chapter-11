@@ -15,9 +15,9 @@ public class PlayerManager : MonoBehaviour, IGameManager {
 
 		_network = service;
 
-		
 
-		// any long-running startup tasks go here, and set status to 'Initializing' until those tasks are complete
+
+		UpdateData(50, 100);
 		status = ManagerStatus.Started;
 	}
 
@@ -34,8 +34,9 @@ public class PlayerManager : MonoBehaviour, IGameManager {
 			health = 0;
 		}
 
-		if (health == 0) {
-			//Messenger.Broadcast(GameEvent.LEVEL_FAILED);
+		if (health == 0) 
+		{
+			Messenger.Broadcast(GameEvent.LEVEL_FAILED);
 		}
 		Messenger.Broadcast(GameEvent.HEALTH_UPDATED);
 	}
